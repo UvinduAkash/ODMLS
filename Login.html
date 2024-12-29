@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Open University of Sri Lanka</title>
+  <!-- Link Flask's static CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Login.css') }}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="logo"></div> <!-- Logo is applied via CSS -->
+      <h2>The Open University of Sri Lanka</h2>
+      <p>Login to your account</p>
+      <form action="{{ url_for('login') }}" method="POST">
+        <div class="input-group">
+          <input type="text" name="username" placeholder="Username or Email" required>
+        </div>
+        <div class="input-group password-group">
+          <input type="password" name="password" id="password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword()">
+            <i id="eye-icon" class="fas fa-eye"></i>
+          </span>
+        </div>
+        <div class="remember-me">
+          <input type="checkbox" id="remember">
+          <label for="remember">Remember Me</label>
+        </div>
+        <button type="submit" class="login-btn" onclick="animateButton(this)">Login</button>
+      </form>
+    </div>
+  </div>
+  <!-- Link Flask's static JS file -->
+  <script src="{{ url_for('static', filename='js/Login.js') }}"></script>
+</body>
+</html>

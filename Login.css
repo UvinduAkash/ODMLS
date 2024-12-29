@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../images/backg.jpg'); /* Corrected path for the background image */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling the image */
+  height: 100vh; /* Sets height of the body to the viewport height */
+  
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px auto;
+  background-image: url('../images/Logo_ousl.jpg'); /* Corrected path for the logo */
+  background-size: contain; /* Makes sure the image fits perfectly */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0b0a0a;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid gold; /* Gold border around the input boxes */
+  border-radius: 20px; /* Smooth rounded corners */
+  background-color: #f9f9f9;
+  font-size: 14px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  outline: none; /* Remove the default outline */
+}
+
+/* Add focus effect with a shadow */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #d5780d; /* Keep the gold border on focus */
+  box-shadow: 0 0 5px rgba(208, 162, 11, 0.8); /* Slight glow effect */
+}
+
+.password-group {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.toggle-password:hover {
+  color: #222;
+}
+
+.forgot-password {
+  text-align: left;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.forgot-password input {
+  margin-right: 5px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #d5780d;
+  color: rgb(14, 13, 13);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #974d10;
+}
+
+/* Animation keyframe */
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move the button up by 10px */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Button move-up animation */
+.button-move-up {
+  animation: moveUp 0.4s ease-in-out; /* Duration matches the timeout in JavaScript */
+}
+
